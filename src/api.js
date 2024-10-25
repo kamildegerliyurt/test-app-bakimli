@@ -1,4 +1,3 @@
-// api.js
 export const loginUserAPI = async (email, password) => {
     const response = await fetch('https://yourapi.com/login', {
         method: 'POST',
@@ -8,11 +7,11 @@ export const loginUserAPI = async (email, password) => {
     return response.json();
 };
 
-export const registerUserAPI = async (email, password) => {
+export const registerUserAPI = async (email, password, name, surname, phone) => {
     const response = await fetch('https://yourapi.com/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, name, surname, phone }),
     });
     return response.json();
 };

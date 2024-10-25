@@ -9,7 +9,7 @@ const store = configureStore({
         user: userReducer,
         data: dataReducer,
     },
-    middleware:[thunk]
+    // middleware:[thunk]
 })
 
 export default store;
