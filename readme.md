@@ -5,7 +5,8 @@ Hello guys
 npm install @reduxjs/toolkit react-redux @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context @react-navigation/bottom-tabs @react-native-async-storage/async-storage
 
 
-npm install react-native-webview  (Video izleme "TestOperating" sayfasındaki)
+npx expo install expo-linear-gradient
+
 
 
 

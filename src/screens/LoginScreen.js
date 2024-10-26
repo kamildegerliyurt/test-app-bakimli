@@ -1,131 +1,73 @@
-// LoginScreen.js
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../redux/userSlice';
-import { useNavigation } from '@react-navigation/native';
+import { login, loadUserData } from '../redux/userSlice';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { LinearGradient } from "expo-linear-gradient";
 
-const LoginScreen = () => {
+import styles from "../constants/styles"
+
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
-  const navigation = useNavigation();
   const { isAuth, errorMessage } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(loadUserData());
+  }, [dispatch]);
 
   const handleLogin = () => {
     dispatch(login({ email, password }));
   };
 
-  // Eğer kullanıcı başarılı şekilde giriş yaparsa UserStack'e yönlendir
-  if (isAuth) {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'UserStack' }],
-    });
-  }
-
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 
+      <LinearGradient 
+        style={{ flex: 1 }} 
+        colors={["#FFEFBA", "#FFF5BA", "#FFF5BA", "#FFF5BA", "#FFEFBA"]}  
+        start={{ x: 0, y: 1 }} 
+        end={{ x: 1, y: 0 }}
+      >
+
 
       <SafeAreaView style={styles.loginScreenContainer}>
-
         <View style={styles.loginTopContainer}>
+          <Text style={styles.title}>LOGIN</Text>
 
-            <Text style={{fontSize:35, fontWeight:"bold",}}>LOGIN</Text>
+          <TextInput
+            placeholder="Email"
+            value={email}
+            onChangeText={setEmail}
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="Password"
+            value={password}
+            secureTextEntry
+            onChangeText={setPassword}
+            style={styles.input}
+          />
 
-            <TextInput placeholder="Email"
-                      placeholderTextColor={"gray"}
-                      value={email}
-                      onChangeText={(text) => setEmail(text)}
-                      style={styles.input}/>
+          {errorMessage && <Text style={styles.error}>{errorMessage}</Text>}
 
-            <TextInput placeholder="Password"
-                      placeholderTextColor={"gray"}
-                      value={password}
-                      secureTextEntry
-                      onChangeText={(text) => setPassword(text)}
-                      style={styles.input}/>
+          <TouchableOpacity onPress={handleLogin} style={styles.handleLoginContainer}>
+            <Text style={styles.handleLoginDataText}>LOGIN</Text>
+          </TouchableOpacity>
 
-              {errorMessage && <Text style={styles.error}>{errorMessage}</Text>}
-
-            {/* <Button title="Login" onPress={handleLogin} /> */}
-
-
-            <TouchableOpacity onPress={handleLogin}
-                              style={styles.handleLoginContainer}>
-                    <Text style={styles.handleLoginText}>LOGIN</Text>
-            </TouchableOpacity>
-
-
-
-                  
-                  <TouchableOpacity onPress={()=> navigation.navigate("Register")}
-                                    style={styles.handleLogin}>
-                    <Text style={styles.handleRegisterPageText}>Register</Text>
-                  </TouchableOpacity>
-
-
+          <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.handleRegisterPage}>
+            <Text style={styles.handleRegisterPageText}>Register</Text>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
+
+      </LinearGradient>
     </TouchableWithoutFeedback>
   );
 };
 
-const styles = StyleSheet.create({
-  loginScreenContainer: {
-    flex: 1,
-    alignItems:"center",
-    justifyContent:"center",
-    backgroundColor:"#DDDBDB",
-  },
-  input: {
-    borderWidth:2, 
-    width:"95%", 
-    borderRadius:20,
-    textAlign:"center",
-    padding:5,
-    backgroundColor:"white",
-    borderColor:"gray",
-    fontSize:16,
-    fontWeight:"bold",
-    marginTop:5,
-  },
-  error: {
-    color: 'red',
-    marginBottom: 8,
-  },
-  loginTopContainer:{
-    flex:1,
-    borderWidth:2,
-    width:"95%",
-    alignItems:"center",
-    justifyContent:"center",
-  },
-  handleLoginContainer:{
-    borderWidth:2,
-    borderColor:"gray",
-    width:"60%",
-    alignItems:"center",
-    justifyContent:"center",
-    padding:10,
-    marginTop:10,
-    borderRadius:20,
-    backgroundColor:"gray",
-  },
-  handleLoginText: {
-    fontSize:18,
-    fontWeight:"bold",
-    color:"black",
-  },
-  handleRegisterPageText:{
-    fontSize:16,
-    textDecorationLine:'underline',
-  }
 
-
-
-});
 
 export default LoginScreen;
