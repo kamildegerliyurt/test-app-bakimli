@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { 
+        StyleSheet,
+        View, 
+        Text, 
+        TextInput, 
+        TouchableOpacity,  
+        TouchableWithoutFeedback, 
+        Keyboard } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, loadUserData } from '../redux/userSlice';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -9,19 +16,21 @@ import { LinearGradient } from "expo-linear-gradient";
 import styles from "../constants/styles"
 
 const LoginScreen = ({ navigation }) => {
+//-------------------------------------------------
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+//-------------------------------------------------
   const dispatch = useDispatch();
   const { isAuth, errorMessage } = useSelector((state) => state.user);
-
+//-------------------------------------------------
   useEffect(() => {
     dispatch(loadUserData());
   }, [dispatch]);
-
+//-------------------------------------------------
   const handleLogin = () => {
     dispatch(login({ email, password }));
   };
-
+//-------------------------------------------------
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 

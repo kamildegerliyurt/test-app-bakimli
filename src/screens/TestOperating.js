@@ -25,24 +25,24 @@ const TestOperating = ({ navigation }) => {
           </View>
 
           <View style={styles.textOperatingDownContainer}>
-            <View style={styles.imageContainer}>
-              <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
-              <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
-            </View>
+              <View style={styles.imageContainer}>
+                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
+                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
+              </View>
 
-            <View style={styles.imageContainer}>
-              <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
-              <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
-            </View>
+              <View style={styles.imageContainer}>
+                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
+                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
+              </View>
 
-            {/* Buton Ekleme */}
-            <View style={styles.buttonTopContainer}>
-              <TouchableOpacity style={styles.button} 
-                                // onPress={()=> navigation.navigate("Appoinment")}
-                                >
-                <Text style={styles.buttonText}>RANDEVU AL</Text>
-              </TouchableOpacity>
-            </View>
+              {/* Buton Ekleme */}
+              <View style={styles.buttonTopContainer}>
+                <TouchableOpacity style={styles.button} 
+                                  // onPress={()=> navigation.navigate("Appoinment")}
+                                  >
+                  <Text style={styles.buttonText}>RANDEVU AL</Text>
+                </TouchableOpacity>
+              </View>
           </View>
 
       </SafeAreaView>

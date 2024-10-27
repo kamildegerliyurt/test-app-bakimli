@@ -3,9 +3,15 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, TouchableWithoutFe
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from "expo-linear-gradient";
-import styles from "../constants/styles";
+import { useDispatch } from 'react-redux';
+import { register } from '../redux/userSlice'; // Redux slice dosyanızın yolu
 
-const Register = ({ navigation }) => { // navigation prop'u burada alınıyor
+import styles from "../constants/styles"
+
+const Register = ({ navigation }) => {
+//-------------------------------------------------
+  const dispatch = useDispatch();
+//-------------------------------------------------
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -13,12 +19,10 @@ const Register = ({ navigation }) => { // navigation prop'u burada alınıyor
     password: '',
     phone: '',
   });
-
+//-------------------------------------------------
   const handleRegister = async () => {
-    // Kayıt işlemini yap
     await AsyncStorage.setItem('userData', JSON.stringify(formData));
-
-    // Form alanlarını temizle
+    dispatch(register(formData));
     setFormData({
       firstName: '',
       lastName: '',
@@ -26,10 +30,9 @@ const Register = ({ navigation }) => { // navigation prop'u burada alınıyor
       password: '',
       phone: '',
     });
-    
-    // Kullanıcıyı kayıt işlemi sonrasında bir bildirim yapabilirsiniz
-    alert('Kayıt başarıyla tamamlandı!'); // veya Toast gibi bir bildirim de kullanabilirsiniz
+    alert('Kayıt başarıyla tamamlandı!');
   };
+  //-------------------------------------------------
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -88,5 +91,7 @@ const Register = ({ navigation }) => { // navigation prop'u burada alınıyor
     </TouchableWithoutFeedback>
   );
 };
+
+
 
 export default Register;

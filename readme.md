@@ -6,7 +6,11 @@ npm install @reduxjs/toolkit react-redux @react-navigation/native @react-navigat
 
 
 npx expo install expo-linear-gradient
-
+//--------------------------------------------
+npm install react-native-reanimated-carousel
+//--------------------------------------------
+npm i react-native-snap-carousel
+//--------------------------------------------
 
 
 
