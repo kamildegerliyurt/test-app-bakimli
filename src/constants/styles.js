@@ -203,34 +203,34 @@ const styles = StyleSheet.create({
         marginVertical: 5,
       },
       imageContainer: {
-        flex: 3, // Her bir imageContainer'ın yüksekliğini eşit yapıyoruz
+        flex: 3, 
         // borderWidth: 2,
         borderColor: COLORS.blue,
         width: "100%",
         alignItems: "center",
-        justifyContent: "space-around", // Resimleri aralıklı olarak yerleştirir
-        flexDirection: 'row', // Resimleri yan yana yerleştirmek için
+        justifyContent: "space-around", 
+        flexDirection: 'row', 
       },
       imageStyle: {
-        width: 150, // Resmin genişliği
-        // height: 150, // Resmin yüksekliği
-        resizeMode: 'contain', // Resmin boyutunu koruyarak ölçeklendirir
+        width: 150, 
+        // height: 150, // 
+        resizeMode: 'contain',
       },
       goText: {
-        fontSize: 24, // Yazı boyutunu ayarlamak için
+        fontSize: 24, 
         fontWeight: 'bold',
-        color: COLORS.black, // Yazı rengini siyah yaptık
+        color: COLORS.black,
       },
       button: {
-        backgroundColor: COLORS.gray, // Butonun arka plan rengi
+        backgroundColor: COLORS.gray, 
         padding: 10,
-        borderRadius: 5, // Kenar yuvarlama
+        borderRadius: 5, 
         borderColor: COLORS.goldenYellow,
         backgroundColor: COLORS.pumpkinOrange,
         
       },
       buttonText: {
-        color: COLORS.white, // Buton metni rengi
+        color: COLORS.white, 
         fontSize: 18,
         fontWeight: 'bold',
       },
@@ -241,6 +241,103 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
       },
+
+
+
+
+      safeArea: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        // backgroundColor: "#ffffff",
+      },
+      mainContainer: {
+        flex: 1,
+        // backgroundColor: "orange",
+        marginBottom: 50,
+        borderColor:COLORS.red,
+        borderWidth: 2,
+        width: "95%",
+        alignItems: "center",
+        justifyContent: "center",
+      },
+      scrollContainer: {
+        borderWidth: 2,
+        borderColor:COLORS.blue,
+        width: "95%",
+        // borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        // backgroundColor: "pink",
+        padding: 10,
+      },
+      titleContainer: {
+        marginRight: 20, 
+        alignItems: 'center', 
+      },
+      titleText: {
+        fontSize: 20,
+        padding: 10,
+      },
+      image: {
+        width: 150,
+        height: 150, 
+        resizeMode:"cover",
+      },
+      textInputContainer: {
+        borderWidth:2,
+        borderColor:COLORS.blue,
+        width:"95%",
+        alignItems:"center",
+        justifyContent:"center",
+        padding:5,
+        marginVertical:5,
+      },
+      textInputStyle: {
+        borderWidth: 2,
+        width: "95%",
+        borderRadius: 20,
+        textAlign: "center",
+        padding: 5,
+        backgroundColor: COLORS.white,
+        borderColor: COLORS.gray,
+        fontSize: 16,
+        fontWeight: "bold",
+      },
+
+
+
+      profileContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 50,
+      },
+      profileTopContainer: {
+        flex: 1,
+        flexDirection: "row",
+        borderWidth: 2,
+        width: "95%",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingHorizontal: 5,
+      },
+      profileDownContainer: {
+        flex: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        borderWidth: 2,
+        width: "95%",
+      },
+      usersInputText: {
+        fontSize: 20,
+        fontWeight: "bold",
+        borderBottomWidth: 1,
+        width: '80%',
+        marginVertical: 10,
+        padding: 5,
+      },
+    
       
     
 })

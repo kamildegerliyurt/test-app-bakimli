@@ -14,7 +14,7 @@ export const COLORS = {
     transparent:"transparent",
     yellow:"yellow",
     black:"black",
-    pureWhite:"#fff",
+    pureWhite:"#ffffff",
     orange:"orange",
     gray:"gray",
     tealBlue:"#05DFD7",
@@ -23,4 +23,9 @@ export const COLORS = {
 
     goldenYellow: "#F3C623",
     pumpkinOrange: "#EB8317",
+    darkPurple: "#3E2565",
+    vividOrange: "#fa751fe6",
+    darkOrange: "#f4511e",
+
+
 };

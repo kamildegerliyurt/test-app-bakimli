@@ -11,8 +11,6 @@ const userSlice = createSlice({
   reducers: {
     register: (state, action) => {
       state.userData = action.payload;
-      // Otomatik giriş yapmamak için bu satırı kaldırdık
-      // state.isAuth = true; 
       state.errorMessage = null;
     },
     login: (state, action) => {
@@ -34,7 +32,7 @@ const userSlice = createSlice({
   },
 });
 
-// AsyncStorage'dan kullanıcı verilerini yükle
+//-------------------------------------------------
 export const loadUserData = () => async (dispatch) => {
   try {
     const userData = await AsyncStorage.getItem('userData');
@@ -43,6 +41,15 @@ export const loadUserData = () => async (dispatch) => {
     }
   } catch (error) {
     console.error('Failed to load user data:', error);
+  }
+};
+
+//-------------------------------------------------
+export const saveUserData = (userData) => async () => {
+  try {
+    await AsyncStorage.setItem('userData', JSON.stringify(userData));
+  } catch (error) {
+    console.error('Failed to save user data:', error);
   }
 };
 
