@@ -15,7 +15,7 @@ const Carts = () => {
             <Image source={require("../../assets/profilePicture.png")} />
           </View>
           <View style={{borderWidth:2, width:"95%", alignItems:"center", justifyContent:"center", marginVertical:10, paddingVertical:10}}>
-            <Text style={{fontSize:20, fontWeight:"bold"}}>Name: {userData?.firstName}</Text>
+            <Text style={{fontSize:20, }}>Name: {userData?.firstName}</Text>
             <Text style={{fontSize:20, fontWeight:"bold"}}>Surname: {userData?.lastName}</Text>
             <Text style={{fontSize:20, fontWeight:"bold"}}>Email: {userData?.email}</Text>
             <Text style={{fontSize:20, fontWeight:"bold"}}>Phone: {userData?.phone}</Text>
