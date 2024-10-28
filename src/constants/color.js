@@ -26,6 +26,7 @@ export const COLORS = {
     darkPurple: "#3E2565",
     vividOrange: "#fa751fe6",
     darkOrange: "#f4511e",
+    grayBest: "#DDDBDB",
 
 
 };
