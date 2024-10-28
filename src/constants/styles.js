@@ -192,6 +192,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginVertical: 5,
+        
+      },
+      videoStyle:{
+        flex:1,
+        alignSelf:"stretch",
+        borderRadius:20,
       },
       textOperatingDownContainer: {
         flex: 2,
@@ -260,8 +266,10 @@ const styles = StyleSheet.create({
         width: "95%",
         alignItems: "center",
         justifyContent: "center",
+        paddingTop:10,
       },
       scrollContainer: {
+        flex:2,
         borderWidth: 2,
         borderColor:COLORS.blue,
         width: "95%",
@@ -285,6 +293,7 @@ const styles = StyleSheet.create({
         resizeMode:"cover",
       },
       textInputContainer: {
+        flex:1,
         borderWidth:2,
         borderColor:COLORS.blue,
         width:"95%",
@@ -304,9 +313,50 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: "bold",
       },
+      cartsMainContainer: {
+        flex:5,
+        borderWidth: 2,
+        borderColor:COLORS.blue,
+        width: "95%",
+        // borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        // backgroundColor: "pink",
+        paddingHorizontal:10,
+      },
+      cartsContainer:{
+        borderWidth:2, 
+        borderColor:COLORS.gray,
+        backgroundColor:COLORS.white,
+        flexDirection:"row",
+        width:"100%", 
+        // alignItems:"center", 
+        // justifyContent:"center",
+        borderRadius:5,
+        padding:5,
+        marginVertical:5,
+        
+      },
+      cartTopContainer:{
+        flex:1,
+        // borderWidth:2, 
+        // borderColor:"green",
+      },
+      cartDownContainer:{
+        flex:3,
+        // borderWidth:2,
+        // borderColor:"red",
+        padding:5,
+      },
+      cartDownTextStyle:{
+        fontSize:16, 
+        fontWeight:"bold", 
+        // borderWidth:2,
+        paddingHorizontal:5, 
+        color:"gray",
+      },
 
-
-
+      //-----------------------------
       profileContainer: {
         flex: 1,
         alignItems: "center",
@@ -337,6 +387,20 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         padding: 5,
       },
+
+
+      //-----------------------------
+      mapPageContainer:{
+        flex:1,
+        alignItems:"center",
+        justifyContent:"center",
+        // backgroundColor:"#ffffff"
+      },
+
+      //-----------------------------
+
+
+
     
       
     
