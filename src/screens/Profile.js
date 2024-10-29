@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { 
-        StyleSheet, 
         Text, 
         View, 
         Image, 
-        TextInput, 
+        TextInput,
+        TouchableOpacity, 
         TouchableWithoutFeedback, 
         Keyboard } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from "expo-linear-gradient";
-import { TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { saveUserData } from '../redux/userSlice'; 
 

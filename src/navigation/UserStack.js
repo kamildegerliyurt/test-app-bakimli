@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 import React from 'react';
-import { TextInputPage, Home, Carts, Appointment, Profile, Map } from "../screens/index";
+import { TextInputPage, Home, Carts, Appointment, Profile, Map, Operating } from "../screens/index";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Ionicons, Entypo } from '@expo/vector-icons';
 
@@ -40,6 +40,12 @@ const UserStack = () => {
       <Tab.Screen 
         name='Carts' 
         component={Carts}
+        options={{ tabBarButton: () => null }} 
+      />
+
+      <Tab.Screen 
+        name='Operating' 
+        component={Operating}
         options={{ tabBarButton: () => null }} 
       />
       

@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { 
-        StyleSheet,
         View, 
         Text, 
         TextInput, 
         TouchableOpacity,  
         TouchableWithoutFeedback, 
         Keyboard } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { login, loadUserData } from '../redux/userSlice';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+        // import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from "expo-linear-gradient";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { login, loadUserData } from '../redux/userSlice';
 import styles from "../constants/styles"
 
 const LoginScreen = ({ navigation }) => {
@@ -69,9 +68,10 @@ const LoginScreen = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.handleRegisterPage}>
             <Text style={styles.handleRegisterPageText}>Register</Text>
           </TouchableOpacity>
-        </View>
-      </SafeAreaView>
 
+
+        </View> 
+      </SafeAreaView>
       </LinearGradient>
     </TouchableWithoutFeedback>
   );

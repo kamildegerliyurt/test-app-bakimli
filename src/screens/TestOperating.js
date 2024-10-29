@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, Pressable, Linking, TouchableOpacity, Image, Button } from 'react-native';
 import React from 'react';
+import { Text, View, TouchableOpacity, Image, } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -8,7 +8,7 @@ import styles from "../constants/styles"
 
 
 import { Video } from 'expo-av';
-import { useState, useCallback, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 const TestOperating = ({ navigation }) => {
 //--------------------------------------- Video Play

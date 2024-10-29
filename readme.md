@@ -14,8 +14,8 @@ https://www.youtube.com/watch?v=2qCmRJz3NOE
 
 //--------------------------------------------Google Map
 npx expo install react-native-maps
-
-
+//--------------------------------------------Calendar
+npm i react-native-calendars
 //--------------------------------------------
 npm install react-native-reanimated-carousel
 npm i react-native-snap-carousel
