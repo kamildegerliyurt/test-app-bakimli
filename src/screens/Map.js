@@ -1,13 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-
-import styles from '../constants/styles'
 import { SafeAreaView } from 'react-native-safe-area-context'
-
-// import MapView from 'react-native-maps';
+import { useState } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 
-import { useState } from 'react';
+import styles from '../constants/styles'
 
 const Map = ({navigation}) => {
 //------------------------------------------

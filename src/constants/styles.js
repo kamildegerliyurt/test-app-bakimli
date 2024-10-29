@@ -3,6 +3,7 @@ import {COLORS} from "../constants/color"
 
 
 
+
 const styles = StyleSheet.create({
     welcomePageContainer: {
         flex: 1,
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
       },
       WelcomeTopContainer: {
         flex: 1,
-        borderWidth: 2,
+        // borderWidth: 2,
         width: '95%',
         alignItems: 'center',
         justifyContent: 'space-evenly',
@@ -34,14 +35,14 @@ const styles = StyleSheet.create({
         color: COLORS.white
       },
       otherButton: {
-        borderWidth: 2,
+        // borderWidth: 2,
         width: '35%',
         alignItems: 'center',
         justifyContent: 'center',
       },
       welcomeDownContainer: {
         flex: 1,
-        borderWidth: 2,
+        // borderWidth: 2,
         width: '95%',
         alignItems: 'center',
         justifyContent: 'center',
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
       },
 
 
-
+//-----------------------------------Register
       registerContainer: {
         flex: 1,
         alignItems: "center",
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
       },
       registerTopContainer: {
         flex: 1,
-        borderWidth: 2,
+        // borderWidth: 2,
         width: "95%",
         alignItems: "center",
         justifyContent: "center",
@@ -145,7 +146,7 @@ const styles = StyleSheet.create({
       },
       loginTopContainer:{
         flex:1,
-        borderWidth:2,
+        // borderWidth:2,
         width:"95%",
         alignItems:"center",
         justifyContent:"center",
@@ -202,7 +203,7 @@ const styles = StyleSheet.create({
       textOperatingDownContainer: {
         flex: 2,
         // borderWidth: 2,
-        borderColor: COLORS.red,
+        // borderColor: COLORS.red,
         width: '95%',
         alignItems: 'center',
         justifyContent: 'center',
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
       imageContainer: {
         flex: 3, 
         // borderWidth: 2,
-        borderColor: COLORS.blue,
+        // borderColor: COLORS.blue,
         width: "100%",
         alignItems: "center",
         justifyContent: "space-around", 
@@ -248,9 +249,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
       },
 
-
-
-
+//----------------------------------Home
       safeArea: {
         flex: 1,
         alignItems: "center",
@@ -261,8 +260,8 @@ const styles = StyleSheet.create({
         flex: 1,
         // backgroundColor: "orange",
         marginBottom: 50,
-        borderColor:COLORS.red,
-        borderWidth: 2,
+        // borderColor:COLORS.red,
+        // borderWidth: 2,
         width: "95%",
         alignItems: "center",
         justifyContent: "center",
@@ -270,8 +269,10 @@ const styles = StyleSheet.create({
       },
       scrollContainer: {
         flex:2,
-        borderWidth: 2,
-        borderColor:COLORS.blue,
+        // borderWidth: 2,
+        // borderColor:COLORS.blue,
+        borderRadius:10,
+        backgroundColor: COLORS.orange,
         width: "95%",
         // borderRadius: 10,
         alignItems: "center",
@@ -294,8 +295,8 @@ const styles = StyleSheet.create({
       },
       textInputContainer: {
         flex:1,
-        borderWidth:2,
-        borderColor:COLORS.blue,
+        // borderWidth:2,
+        // borderColor:COLORS.blue,
         width:"95%",
         alignItems:"center",
         justifyContent:"center",
@@ -315,7 +316,7 @@ const styles = StyleSheet.create({
       },
       cartsMainContainer: {
         flex:5,
-        borderWidth: 2,
+        // borderWidth: 2,
         borderColor:COLORS.blue,
         width: "95%",
         // borderRadius: 10,
@@ -353,10 +354,10 @@ const styles = StyleSheet.create({
         fontWeight:"bold", 
         // borderWidth:2,
         paddingHorizontal:5, 
-        color:"gray",
+        color:COLORS.gray,
       },
 
-      //-----------------------------
+      //-----------------------------Profile
       profileContainer: {
         flex: 1,
         alignItems: "center",
@@ -366,7 +367,7 @@ const styles = StyleSheet.create({
       profileTopContainer: {
         flex: 1,
         flexDirection: "row",
-        borderWidth: 2,
+        // borderWidth: 2,
         width: "95%",
         alignItems: "center",
         justifyContent: "space-between",
@@ -376,7 +377,7 @@ const styles = StyleSheet.create({
         flex: 10,
         alignItems: "center",
         justifyContent: "center",
-        borderWidth: 2,
+        // borderWidth: 2,
         width: "95%",
       },
       usersInputText: {
@@ -389,7 +390,7 @@ const styles = StyleSheet.create({
       },
 
 
-      //-----------------------------
+      //-----------------------------Map
       mapPageContainer:{
         flex:1,
         alignItems:"center",
@@ -397,9 +398,144 @@ const styles = StyleSheet.create({
         // backgroundColor:"#ffffff"
       },
 
-      //-----------------------------
-
-
+      //-----------------------------Carts
+      mainCartContainer:{
+       flex:1, 
+       alignItems:"center", 
+       justifyContent:"center",
+       marginBottom:50,
+      },
+      innerContainer: {
+       flex:1, 
+      //  borderWidth:2, 
+       width:"95%", 
+       alignItems:"center", 
+       justifyContent:"center",
+      },
+      profileImageContainer: {
+       flex:2,
+      //  borderWidth:2, 
+       width:"95%", 
+       alignItems:"center", 
+       justifyContent:"center",
+      },
+      infoContainer: {
+        flex:1,
+        // borderWidth:2, 
+        width:"95%", 
+        alignItems:"center", 
+        justifyContent:"center", 
+        // marginVertical:10, 
+        // paddingVertical:10,
+      },
+      boldText: {
+       fontSize:20, 
+       fontWeight:"bold",
+      },
+    
+      cartButtonContainer:{
+       flex:1,
+      //  borderWidth:2,
+       width:"95%", 
+       alignItems:"center", 
+       justifyContent:"center"
+      },
+      cartsPageButton:{
+        borderWidth: 2,
+        borderColor: COLORS.goldenYellow,
+        backgroundColor: COLORS.pumpkinOrange,
+        width: "60%",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        marginTop: 10,
+        borderRadius: 20,
+      },
+      cartsPageButtonText: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: COLORS.black,
+      },
+      //-----------------------------Operating
+      operatingMainContainer:{
+        flex: 1, 
+        alignItems: "center", 
+        justifyContent: "center",
+      },
+      operatingOtherContainer:{
+       flex: 1, 
+       marginBottom: 50, 
+      //  borderWidth: 2, 
+       width: "95%", 
+       alignItems: "center", 
+       justifyContent: "center",
+      },
+      headerContainer:{
+       flex: 1, 
+      //  borderWidth: 2,
+       width: "95%", 
+       alignItems: "center", 
+       justifyContent: "center", 
+      },
+      calendarContainer: {
+      flex: 9, 
+      marginVertical: 5, 
+      // borderWidth: 2, 
+      width: "95%", 
+      alignItems: "center", 
+      justifyContent: "center",
+      },
+      footerContainer:{
+      flex: 2, 
+      marginBottom: 20, 
+      marginVertical: 5, 
+      // borderWidth: 2,
+      width: "95%",
+      alignItems: "center", 
+      justifyContent: "center",
+      },
+      addButton: {
+      borderWidth: 2, 
+      borderColor: COLORS.goldenYellow,
+      backgroundColor: COLORS.pumpkinOrange,
+      width: "60%", 
+      alignItems: "center", 
+      justifyContent: "center", 
+      padding: 10, 
+      marginTop: 5, 
+      borderRadius: 20,
+      },
+    //-----------------------------Appointment
+    appointmentMainContainer:{
+      flex: 1, 
+      alignItems: "center", 
+      justifyContent: "center" 
+      },
+      appointmentMainText:{
+      fontSize: 25, 
+      fontWeight: "bold", 
+      marginBottom: 20
+      },
+      dateContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: COLORS.lightGray,
+      },
+      dateText: {
+        fontSize: 18,
+      },
+      deleteButton: {
+        backgroundColor: COLORS.pumpkinOrange,
+        borderRadius: 5,
+        padding: 5,
+      },
+      deleteButtonText: {
+        color: COLORS.white,
+      }, 
+    //-----------------------------
 
     
       

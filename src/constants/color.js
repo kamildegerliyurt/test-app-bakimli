@@ -27,6 +27,7 @@ export const COLORS = {
     vividOrange: "#fa751fe6",
     darkOrange: "#f4511e",
     grayBest: "#DDDBDB",
+    lightGray: "#ccc"
 
 
 };

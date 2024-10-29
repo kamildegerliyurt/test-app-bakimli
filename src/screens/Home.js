@@ -1,5 +1,4 @@
-import { 
-  StyleSheet,  
+import {  
   View, 
   ScrollView, 
   Image, 
@@ -7,8 +6,10 @@ import {
   Text, 
   TouchableWithoutFeedback, 
   Keyboard, 
-  Pressable,
-  Touchable} from 'react-native';
+  TouchableOpacity,
+} from 'react-native';
+
+
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from "expo-linear-gradient";
@@ -17,7 +18,7 @@ import { useState } from 'react';
 import styles from "../constants/styles"
 
 import { Rating, RatingProps } from '@rneui/themed';
-import { TouchableOpacity } from 'react-native';
+
 
 const Home = ({ navigation }) => {
 //---------------------------------------------------------
@@ -39,11 +40,13 @@ setRating(newRating);
 //-----------------------------------------
 
 return (
+
 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 <LinearGradient style={{ flex: 1 }} 
                colors={["#FFEFBA", "#FFF5BA", "#FFF5BA", "#FFF5BA", "#FFEFBA"]}  
                start={{ x: 0, y: 1 }} 
                end={{ x: 1, y: 0 }}>
+ 
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.mainContainer}>
 
@@ -62,7 +65,8 @@ return (
           <View style={styles.textInputContainer}>
             <TextInput style={styles.textInputStyle}
                       placeholder='Search...'
-                      placeholderTextColor={"gray"}/>
+                      placeholderTextColor={"gray"}
+                      />
           </View>
 
           {/* Carts */}
@@ -123,6 +127,7 @@ return (
           </View>
         
       </View>
+
     </SafeAreaView>
 </LinearGradient>
 </TouchableWithoutFeedback>
