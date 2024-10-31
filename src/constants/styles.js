@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row', 
       },
       imageStyle: {
-        width: 150, 
+        width: 150,
         // height: 150, // 
         resizeMode: 'contain',
       },
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         // borderColor:COLORS.red,
         // borderWidth: 2,
-        width: "95%",
+        width:"95%",
         alignItems: "center",
         justifyContent: "center",
         paddingTop:10,
@@ -317,7 +317,7 @@ const styles = StyleSheet.create({
       cartsMainContainer: {
         flex:5,
         // borderWidth: 2,
-        borderColor:COLORS.blue,
+        // borderColor:COLORS.blue,
         width: "95%",
         // borderRadius: 10,
         alignItems: "center",

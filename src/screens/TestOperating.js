@@ -53,14 +53,14 @@ const [status, setStatus] = useState({});
 
               {/*  First Image Horizontal */}
               <View style={styles.imageContainer}>
-                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
-                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
+                <Image source={require('../../assets/men_care_product/man_care_product1.png')} style={styles.imageStyle} />
+                <Image source={require('../../assets/men_care_product/man_care_product2.png')} style={styles.imageStyle} />
               </View>
 
               {/*  Second Image Horizontal */}
               <View style={styles.imageContainer}>
-                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
-                <Image source={require('../../assets/emptyImage.jpg')} style={styles.imageStyle} />
+                <Image source={require('../../assets/men_care_product/man_care_product3.png')} style={styles.imageStyle} />
+                <Image source={require('../../assets/men_care_product/man_care_product1.png')} style={styles.imageStyle} />
               </View>
 
               {/* Buton Ekleme */}
