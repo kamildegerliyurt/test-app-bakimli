@@ -14,7 +14,7 @@ export const loginUserAPI = async (email, password) => {
       body: JSON.stringify({ email, password, name, surname, phone }),
     });
     const data = await response.json();
-    console.log('API response:', data);  // API yanıtını kontrol et
+    console.log('API response:', data);  
     return data;
   };
   

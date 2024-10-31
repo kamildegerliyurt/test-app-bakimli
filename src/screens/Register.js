@@ -13,6 +13,8 @@ import { useDispatch } from 'react-redux';
 import { register } from '../redux/userSlice';
 import styles from "../constants/styles";
 
+
+
 const Register = ({ navigation }) => {
 //--------------------------------------------
   const dispatch = useDispatch();
@@ -46,6 +48,7 @@ const Register = ({ navigation }) => {
                       end={{ x: 1, y: 0 }}>
 
         <SafeAreaView style={styles.registerContainer}>
+
 
             <View style={styles.registerTopContainer}>
 
@@ -88,6 +91,7 @@ const Register = ({ navigation }) => {
                 </TouchableOpacity>
 
             </View>
+
 
         </SafeAreaView>
       </LinearGradient>
